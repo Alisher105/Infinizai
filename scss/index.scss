@@ -22,6 +22,7 @@
 body {
     font-family: 'Orbitron';
     color: #FFFFFF;
+    overflow-x: hidden;
 }
 
 h1,
@@ -54,7 +55,7 @@ a {
     z-index: 2;
     padding: 20px 0;
     @media all and (max-width: 768px) {
-        padding-top: 0px;
+        padding: 0px 0px;
     }
     &__wrapper {
         display: flex;
@@ -111,6 +112,7 @@ a {
         justify-content: flex-start;
         align-items: center;
         flex-direction: column;
+        top: 70px;
     }
 }
 
@@ -142,8 +144,14 @@ a {
         width: 320px;
         margin-right: 90px;
     }
+    @media all and (max-width: 850px) {
+        margin-right: 60px;
+    }
     @media all and (max-width: 768px) {
         flex-direction: column;
+        margin-right: 0px;
+        text-align: center;
+        width: 80px;
     }
     @media all and (max-width: 576px) {}
     a {
@@ -161,6 +169,7 @@ a {
         }
         @media all and (max-width: 768px) {
             font-size: 20px;
+            padding-top: 30px;
         }
         @media all and (max-width: 576px) {
             font-size: 18px;
@@ -417,10 +426,6 @@ a {
         display: flex;
         flex-direction: column;
         z-index: 1;
-        @media all and (max-width: 768px) {}
-        @media all and (max-width: 576px) {
-            text-align: center;
-        }
     }
     &__inner-title {
         a {
@@ -501,8 +506,6 @@ a {
             &:hover {
                 background: #80858F;
             }
-            @media all and (max-width: 1200px) {}
-            @media all and (max-width: 992px) {}
             @media all and (max-width: 768px) {
                 padding: 16px 24px;
             }
@@ -541,13 +544,9 @@ a {
 .sponsors {
     background: #FDD04A;
     width: 100%;
-    @media all and(max-width: 1200px) {}
-    @media all and(max-width: 992px) {}
-    @media all and(max-width: 768px) {}
-    @media all and(max-width: 576px) {}
     &__wrap {
         width: 100%;
-        &_title {
+        &-title {
             text-align: center;
             padding-top: 130px;
             @media all and(max-width: 1200px) {
@@ -566,22 +565,17 @@ a {
                 font-size: 48px;
                 text-transform: capitalize;
                 color: #222730;
-                padding-bottom: 44px;
                 @media all and(max-width: 1200px) {
                     font-size: 46px;
-                    padding-bottom: 42px;
                 }
                 @media all and(max-width: 992px) {
                     font-size: 42px;
-                    padding-bottom: 38px;
                 }
                 @media all and(max-width: 768px) {
                     font-size: 38px;
-                    padding-bottom: 32px;
                 }
                 @media all and(max-width: 576px) {
                     font-size: 32px;
-                    padding-bottom: 26px;
                 }
             }
             p {
@@ -605,6 +599,12 @@ a {
                 }
             }
         }
+    }
+    &__wrap-underline {
+        padding-bottom: 29px;
+        position: relative;
+        left: 50px;
+        width: 25%;
     }
     &__wrap-links {
         padding-top: 41px;
@@ -820,7 +820,6 @@ a {
         }
         h4 {
             font-size: 32px;
-            font-weight: 400;
             padding-bottom: 19px;
             @media all and (max-width: 992px) {}
             @media all and (max-width: 768px) {
@@ -872,6 +871,12 @@ a {
         @media all and (max-width: 992px) {
             padding-bottom: 20px;
         }
+        @media all and (max-width: 576px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
     }
     &__link {
         a {
@@ -883,15 +888,26 @@ a {
             color: #57B8FF;
             padding-bottom: 15px;
             @media all and (max-width: 1200px) {}
-            @media all and (max-width: 992px) {}
-            @media all and (max-width: 768px) {}
-            @media all and (max-width: 576px) {}
+            @media all and (max-width: 992px) {
+                font-size: 15px;
+                line-height: 14px;
+                padding-bottom: 14px;
+            }
+            @media all and (max-width: 768px) {
+                font-size: 14px;
+                line-height: 12px;
+                padding-bottom: 12px;
+            }
+            @media all and (max-width: 576px) {
+                font-size: 12px;
+                line-height: 10px;
+                padding-bottom: 10px;
+            }
         }
     }
     &__title {
         h3 {
             width: 92%;
-            font-weight: 400;
             font-size: 64px;
             line-height: 74px;
             text-transform: capitalize;
@@ -901,16 +917,15 @@ a {
                 line-height: 72px;
             }
             @media all and (max-width: 992px) {
-                font-weight: 400;
                 font-size: 54px;
                 line-height: 68px;
             }
             @media all and (max-width: 768px) {
-                font-size: 50px;
+                font-size: 48px;
                 line-height: 62px;
             }
             @media all and (max-width: 576px) {
-                font-size: 44px;
+                font-size: 38px;
                 line-height: 56px;
             }
         }
@@ -1096,6 +1111,9 @@ a {
     }
     &__thumb {
         word-spacing: 18px;
+        @media all and(max-width: 768px) {
+            padding-bottom: 30px;
+        }
         img {
             @media all and(max-width: 768px) {
                 margin: 5px;
@@ -1120,12 +1138,30 @@ a {
     }
     &__card-aim {
         background: url(../img/labels/game-scrn-gun.png);
+        @media all and (max-width: 768px) {
+            background-position-y: -400px;
+        }
+        @media all and (max-width: 576px) {
+            background-position-y: -300px;
+        }
     }
     &__card-gmpad {
         background: url(../img/labels/game-scrn-win.png);
+        @media all and (max-width: 768px) {
+            background-position-y: -220px;
+        }
+        @media all and (max-width: 576px) {
+            background-position-y: -200px;
+        }
     }
     &__card-compas {
         background: url(../img/labels/game-scrn-map.png);
+        @media all and (max-width: 768px) {
+            background-position-y: -220px;
+        }
+        @media all and (max-width: 576px) {
+            background-position-y: -200px;
+        }
     }
 }
 
@@ -1410,6 +1446,8 @@ a {
 
 .application {
     background: url(../img/application/bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
     &__wrapper {
         text-align: center;
         margin: 0 auto;
@@ -1421,28 +1459,28 @@ a {
             width: 90%;
         }
         h3 {
-            padding: 126px 0px 51px 0px;
+            padding-top: 126px;
             font-size: 72px;
             line-height: 82px;
             text-align: center;
             color: #141820;
             @media all and (max-width: 1200px) {
-                padding: 120px 0px 48px 0px;
+                padding: 120px 0px 5px 0px;
                 font-size: 68px;
                 line-height: 76px;
             }
             @media all and (max-width: 992px) {
-                padding: 110px 0px 42px 0px;
+                padding: 110px 0px 5px 0px;
                 font-size: 64px;
                 line-height: 66px;
             }
             @media all and (max-width: 768px) {
-                padding: 90px 0px 34px 0px;
+                padding: 90px 0px 4px 0px;
                 font-size: 52px;
                 line-height: 58px;
             }
             @media all and (max-width: 576px) {
-                padding: 60px 0px 28px 0px;
+                padding: 60px 0px 4px 0px;
                 font-size: 32px;
                 line-height: 48px;
             }
@@ -1524,6 +1562,20 @@ a {
                 line-height: 14px;
             }
         }
+    }
+    &__wrapper-underline {
+        padding-bottom: 51px;
+        position: relative;
+        left: 150px;
+        width: 50%;
+        @media all and (max-width: 1200px) {}
+        @media all and (max-width: 992px) {
+            left: 0px;
+        }
+        @media all and (max-width: 768px) {
+            left: 0px;
+        }
+        @media all and (max-width: 576px) {}
     }
 }
 

@@ -31,6 +31,7 @@
 body {
   font-family: 'Orbitron';
   color: #FFFFFF;
+  overflow-x: hidden;
 }
 
 h1,
@@ -74,7 +75,7 @@ a {
 
 @media all and (max-width: 768px) {
   .header {
-    padding-top: 0px;
+    padding: 0px 0px;
   }
 }
 
@@ -168,6 +169,7 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    top: 70px;
   }
 }
 
@@ -221,12 +223,21 @@ a {
   }
 }
 
+@media all and (max-width: 850px) {
+  .menu {
+    margin-right: 60px;
+  }
+}
+
 @media all and (max-width: 768px) {
   .menu {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin-right: 0px;
+    text-align: center;
+    width: 80px;
   }
 }
 
@@ -255,6 +266,7 @@ a {
 @media all and (max-width: 768px) {
   .menu a {
     font-size: 20px;
+    padding-top: 30px;
   }
 }
 
@@ -588,12 +600,6 @@ a {
   z-index: 1;
 }
 
-@media all and (max-width: 576px) {
-  .main__inner {
-    text-align: center;
-  }
-}
-
 .main__inner-title a {
   font-size: 16px;
   color: #57B8FF;
@@ -772,71 +778,66 @@ a {
   width: 100%;
 }
 
-.sponsors__wrap_title {
+.sponsors__wrap-title {
   text-align: center;
   padding-top: 130px;
 }
 
 @media all and (max-width: 1200px) {
-  .sponsors__wrap_title {
+  .sponsors__wrap-title {
     padding-top: 100px;
   }
 }
 
 @media all and (max-width: 992px) {
-  .sponsors__wrap_title {
+  .sponsors__wrap-title {
     padding-top: 80px;
   }
 }
 
 @media all and (max-width: 768px) {
-  .sponsors__wrap_title {
+  .sponsors__wrap-title {
     padding-top: 40px;
   }
 }
 
 @media all and (max-width: 576px) {
-  .sponsors__wrap_title {
+  .sponsors__wrap-title {
     padding-top: 20px;
   }
 }
 
-.sponsors__wrap_title h3 {
+.sponsors__wrap-title h3 {
   font-size: 48px;
   text-transform: capitalize;
   color: #222730;
-  padding-bottom: 44px;
 }
 
 @media all and (max-width: 1200px) {
-  .sponsors__wrap_title h3 {
+  .sponsors__wrap-title h3 {
     font-size: 46px;
-    padding-bottom: 42px;
   }
 }
 
 @media all and (max-width: 992px) {
-  .sponsors__wrap_title h3 {
+  .sponsors__wrap-title h3 {
     font-size: 42px;
-    padding-bottom: 38px;
   }
 }
 
 @media all and (max-width: 768px) {
-  .sponsors__wrap_title h3 {
+  .sponsors__wrap-title h3 {
     font-size: 38px;
-    padding-bottom: 32px;
   }
 }
 
 @media all and (max-width: 576px) {
-  .sponsors__wrap_title h3 {
+  .sponsors__wrap-title h3 {
     font-size: 32px;
-    padding-bottom: 26px;
   }
 }
 
-.sponsors__wrap_title p {
+.sponsors__wrap-title p {
   font-size: 16px;
   line-height: 26px;
   color: #555555;
@@ -845,28 +846,35 @@ a {
 }
 
 @media all and (max-width: 1200px) {
-  .sponsors__wrap_title p {
+  .sponsors__wrap-title p {
     line-height: 25px;
     width: 50%;
   }
 }
 
 @media all and (max-width: 992px) {
-  .sponsors__wrap_title p {
+  .sponsors__wrap-title p {
     width: 60%;
   }
 }
 
 @media all and (max-width: 768px) {
-  .sponsors__wrap_title p {
+  .sponsors__wrap-title p {
     width: 70%;
   }
 }
 
 @media all and (max-width: 576px) {
-  .sponsors__wrap_title p {
+  .sponsors__wrap-title p {
     width: 90%;
   }
+}
+
+.sponsors__wrap-underline {
+  padding-bottom: 29px;
+  position: relative;
+  left: 50px;
+  width: 25%;
 }
 
 .sponsors__wrap-links {
@@ -1216,7 +1224,6 @@ a {
 
 .desc__card-text h4 {
   font-size: 32px;
-  font-weight: 400;
   padding-bottom: 19px;
 }
 
@@ -1297,6 +1304,22 @@ a {
   }
 }
 
+@media all and (max-width: 576px) {
+  .gaming__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+}
+
 .gaming__link a {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1311,9 +1334,32 @@ a {
   padding-bottom: 15px;
 }
 
+@media all and (max-width: 992px) {
+  .gaming__link a {
+    font-size: 15px;
+    line-height: 14px;
+    padding-bottom: 14px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .gaming__link a {
+    font-size: 14px;
+    line-height: 12px;
+    padding-bottom: 12px;
+  }
+}
+
+@media all and (max-width: 576px) {
+  .gaming__link a {
+    font-size: 12px;
+    line-height: 10px;
+    padding-bottom: 10px;
+  }
+}
+
 .gaming__title h3 {
   width: 92%;
-  font-weight: 400;
   font-size: 64px;
   line-height: 74px;
   text-transform: capitalize;
@@ -1329,7 +1375,6 @@ a {
 
 @media all and (max-width: 992px) {
   .gaming__title h3 {
-    font-weight: 400;
     font-size: 54px;
     line-height: 68px;
   }
@@ -1337,14 +1382,14 @@ a {
 
 @media all and (max-width: 768px) {
   .gaming__title h3 {
-    font-size: 50px;
+    font-size: 48px;
     line-height: 62px;
   }
 }
 
 @media all and (max-width: 576px) {
   .gaming__title h3 {
-    font-size: 44px;
+    font-size: 38px;
     line-height: 56px;
   }
 }
@@ -1622,6 +1667,12 @@ a {
 }
 
 @media all and (max-width: 768px) {
+  .customize__thumb {
+    padding-bottom: 30px;
+  }
+}
+
+@media all and (max-width: 768px) {
   .customize__thumb img {
     margin: 5px;
   }
@@ -1655,12 +1706,48 @@ a {
   background: url(../img/labels/game-scrn-gun.png);
 }
 
+@media all and (max-width: 768px) {
+  .labels__card-aim {
+    background-position-y: -400px;
+  }
+}
+
+@media all and (max-width: 576px) {
+  .labels__card-aim {
+    background-position-y: -300px;
+  }
+}
+
 .labels__card-gmpad {
   background: url(../img/labels/game-scrn-win.png);
 }
 
+@media all and (max-width: 768px) {
+  .labels__card-gmpad {
+    background-position-y: -220px;
+  }
+}
+
+@media all and (max-width: 576px) {
+  .labels__card-gmpad {
+    background-position-y: -200px;
+  }
+}
+
 .labels__card-compas {
   background: url(../img/labels/game-scrn-map.png);
+}
+
+@media all and (max-width: 768px) {
+  .labels__card-compas {
+    background-position-y: -220px;
+  }
+}
+
+@media all and (max-width: 576px) {
+  .labels__card-compas {
+    background-position-y: -200px;
+  }
 }
 
 .bg-width {
@@ -2096,6 +2183,8 @@ a {
 
 .application {
   background: url(../img/application/bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .application__wrapper {
@@ -2117,7 +2206,7 @@ a {
 }
 
 .application__wrapper h3 {
-  padding: 126px 0px 51px 0px;
+  padding-top: 126px;
   font-size: 72px;
   line-height: 82px;
   text-align: center;
@@ -2126,7 +2215,7 @@ a {
 
 @media all and (max-width: 1200px) {
   .application__wrapper h3 {
-    padding: 120px 0px 48px 0px;
+    padding: 120px 0px 5px 0px;
     font-size: 68px;
     line-height: 76px;
   }
@@ -2134,7 +2223,7 @@ a {
 
 @media all and (max-width: 992px) {
   .application__wrapper h3 {
-    padding: 110px 0px 42px 0px;
+    padding: 110px 0px 5px 0px;
     font-size: 64px;
     line-height: 66px;
   }
@@ -2142,7 +2231,7 @@ a {
 
 @media all and (max-width: 768px) {
   .application__wrapper h3 {
-    padding: 90px 0px 34px 0px;
+    padding: 90px 0px 4px 0px;
     font-size: 52px;
     line-height: 58px;
   }
@@ -2150,7 +2239,7 @@ a {
 
 @media all and (max-width: 576px) {
   .application__wrapper h3 {
-    padding: 60px 0px 28px 0px;
+    padding: 60px 0px 4px 0px;
     font-size: 32px;
     line-height: 48px;
   }
@@ -2269,6 +2358,25 @@ a {
     padding: 10px 12px 10px 12px;
     font-size: 12px;
     line-height: 14px;
+  }
+}
+
+.application__wrapper-underline {
+  padding-bottom: 51px;
+  position: relative;
+  left: 150px;
+  width: 50%;
+}
+
+@media all and (max-width: 992px) {
+  .application__wrapper-underline {
+    left: 0px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .application__wrapper-underline {
+    left: 0px;
   }
 }
 
